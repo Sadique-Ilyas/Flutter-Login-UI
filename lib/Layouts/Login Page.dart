@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login_fb_google/Auth%20Services.dart';
-import 'package:flutter_login_fb_google/Fade%20Animation.dart';
+import 'package:flutter_login_fb_google/Services/Auth%20Services.dart';
+import 'package:flutter_login_fb_google/Animation/Fade%20Animation.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);

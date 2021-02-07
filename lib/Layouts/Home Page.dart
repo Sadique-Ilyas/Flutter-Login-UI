@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_login_fb_google/Auth%20Services.dart';
-import 'package:flutter_login_fb_google/Fade%20Animation.dart';
+import 'package:flutter_login_fb_google/Services/Auth%20Services.dart';
+import 'package:flutter_login_fb_google/Animation/Fade%20Animation.dart';
 
 class HomePage extends StatefulWidget {
   @override
