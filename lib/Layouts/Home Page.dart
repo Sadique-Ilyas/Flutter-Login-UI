@@ -114,7 +114,23 @@ class _HomePageState extends State<HomePage> {
                           loadingBuilder: (context, child, loadingProgress) {
                             if (loadingProgress == null)
                               return FadeAnimation(0.5, child);
-                            return Container();
+                            return Center(
+                                child: Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                Icon(
+                                  Icons.account_circle,
+                                  size: 100,
+                                  color: Color.fromRGBO(143, 148, 251, 1),
+                                ),
+                                Center(
+                                  child: CircularProgressIndicator(
+                                      value: loadingProgress
+                                              .cumulativeBytesLoaded /
+                                          loadingProgress.expectedTotalBytes),
+                                ),
+                              ],
+                            ));
                           },
                           fit: BoxFit.fill,
                           width: 100,
@@ -134,13 +150,16 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              FadeAnimation(1.8,Text(
-                user.email,
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Color.fromRGBO(143, 148, 251, 1),
+              FadeAnimation(
+                1.8,
+                Text(
+                  user.email,
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Color.fromRGBO(143, 148, 251, 1),
+                  ),
                 ),
-              ),),
+              ),
               FadeAnimation(
                   2,
                   GestureDetector(
